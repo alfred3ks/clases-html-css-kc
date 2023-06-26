@@ -1,0 +1,9 @@
+/* Variables */
+:root {
+  --main-bg-color: black;
+}
+
+.main-bg {
+  background-color: var(--main-bg-color);
+  color: white;
+}
