@@ -3,6 +3,9 @@
   text-align: center;
   /* Para poder usar la imagen  asi el absolute se posiciona con este*/
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner .banner__content {
