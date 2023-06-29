@@ -1,0 +1,13 @@
+/* Estilos de bottones sensillo!!!!*/
+.btn {
+  color: var(--main-text-color);
+  background-color: var(--main-brand-color);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--main-brand-color);
+}
+
+.hidden {
+  display: none;
+  /* visibility: hidden; */
+}

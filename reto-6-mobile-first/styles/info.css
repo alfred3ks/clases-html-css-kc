@@ -1,0 +1,27 @@
+/* Seccion info */
+.info {
+  width: 90%;
+  /* Limitamos el ancho del contenido, el texto */
+  max-width: 768px;
+  /* Centramos el contenido */
+  margin: 0 auto;
+}
+
+.info .info__video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.info .info__video img {
+  position: relative;
+  z-index: 2;
+  width: 274px;
+}
+
+.info .info__video video {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  width: 175px;
+}
