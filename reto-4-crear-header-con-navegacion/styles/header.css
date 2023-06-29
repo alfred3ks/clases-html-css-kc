@@ -1,0 +1,26 @@
+.header {
+  background-color: var(--main-bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Contenedor imagen */
+.header__image {
+  width: 120px;
+}
+
+/* Controlamos el tamaño de la imagen */
+.header__image img {
+  width: 100%;
+}
+
+/* Listas del menu OJO OJO a la especificidad */
+.header .header__nav .header__nav__list {
+  list-style: none;
+}
+
+/* Quitamos la linea al enlace */
+.header__nav .header__nav__list .header__nav__list__item a {
+  text-decoration: none;
+}
