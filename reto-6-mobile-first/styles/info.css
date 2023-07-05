@@ -5,6 +5,7 @@
   max-width: 768px;
   /* Centramos el contenido */
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .info .info__video {
@@ -24,4 +25,24 @@
   z-index: 1;
   top: 30px;
   width: 175px;
+}
+
+/* Media queries */
+@media screen and (width >= 768px) {
+  .info .info__video video {
+    top: 70px;
+    width: 384px;
+  }
+  .info .info__video img {
+    width: 628px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .info {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }

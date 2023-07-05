@@ -29,3 +29,17 @@
   z-index: 0;
   opacity: 0.3;
 }
+
+/* Media queries, sintaxis moderna */
+@media (width >= 800px) and (orientation: landscape) {
+  .banner {
+    height: 55vh;
+  }
+}
+
+/* Media queries del hover, muy util al hacer hover cuando en el navegador hacemos la pantalla mas pequeña pero no es un movil o tablet que son tactiles. */
+/* @media (hover: hover) {
+  p:hover {
+    color: yellow;
+  }
+} */

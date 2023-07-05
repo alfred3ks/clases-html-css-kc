@@ -7,7 +7,29 @@
   border: 1px solid var(--main-brand-color);
 }
 
-.hidden {
+.hidden-xs {
   display: none;
   /* visibility: hidden; */
+}
+
+/* Aplicamos las media queries */
+/* Opcion para imprimir. Con ctrl + p lo vemos*/
+@media print {
+  * {
+    color: red;
+  }
+}
+
+/* Mobile first min-width */
+/* @media screen and (min-width: 768px) {
+  .hidden-xs {
+    display: block;
+  }
+} */
+
+/* Sintaxis mas moderna */
+@media screen and (width >= 768px) {
+  .hidden-xs {
+    display: block;
+  }
 }

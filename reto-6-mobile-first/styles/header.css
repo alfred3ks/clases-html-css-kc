@@ -22,9 +22,19 @@
 /* Listas del menu OJO OJO a la especificidad */
 .header .header__nav .header__nav__list {
   list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Quitamos la linea al enlace */
 .header__nav .header__nav__list .header__nav__list__item a {
   text-decoration: none;
+}
+
+/* Usamos sin el screem y vemos que funciona */
+@media (width >= 768px) {
+  .header__image {
+    width: 200px;
+  }
 }
