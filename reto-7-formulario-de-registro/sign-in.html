@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <title>Sign in | codeflix</title>
+</head>
+
+<body class="main-bg">
+
+  <!-- Formulario de sign-in -->
+  <div class="container">
+    <h1>Sing in</h1>
+    <!-- Formulario -->
+    <form action="registro.html" method="post">
+      <!-- Envuelvo el label y input en un div -->
+      <div>
+        <!-- El label y el input los relacionamos por el for y id, el atributo name muy importante -->
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Add your email" name="email" required>
+      </div>
+      <!-- Envuelvo el label y input en un div -->
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Add your password" name="password" required>
+      </div>
+      <div>
+        <!-- Envuelvo el label y input en un div -->
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" placeholder="Add your phone" name="phone" required>
+      </div>
+      <div>
+        <!-- Envuelvo el label y input en un div -->
+        <label for="avatar">Choose a profile image</label>
+        <input type="file" id="avatar" name="avatar" accept="image/png, images/jpg" required>
+      </div>
+
+      <!-- La etiqueta fieldset, nos crea como un borde, para agrupar elementos fuera del contexto-->
+      <fieldset>
+        <legend>Fav category</legend>
+        <div>
+          <label for="shows">Shows</label>
+          <input type="radio" id="shows" name="category" checked value="shows" required>
+          <label for="docus">Docus</label>
+          <input type="radio" id="docus" name="category" value="docus" required>
+        </div>
+      </fieldset>
+
+      <!-- Usando Checkbox en vez de radio OJO esto lo ha borrado interesante para enviar informacion de varios check-->
+      <!-- <fieldset>
+        <legend>Select categories</legend>
+        <div>
+          <label for="cshows">Shows</label>
+          <input type="checkbox" id="cshows" name="ccategory" checked value="shows">
+          <label for="cdocus">Docus</label>
+          <input type="checkbox" id="cdocus" name="ccategory" value="docus">
+        </div>
+      </fieldset> -->
+
+      <!-- Text area -->
+      <div>
+        <!-- Envuelvo el label y input en un div -->
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Add your bio" required></textarea>
+      </div>
+
+      <!-- Checkbox -->
+      <div>
+        <!-- Envuelvo el label y input en un div -->
+        <input type="checkbox" id="remember" name="remember" required>
+        <label for="remember">Remember me</label>
+      </div>
+
+      <!-- Muy usado en las web pero dificil de dar estilos el select -->
+      <div>
+        <label for="country">Country</label>
+        <select name="country" id="country" required>
+          <option value="madrid">Madrid</option>
+          <option value="barcelona">Barcelona</option>
+          <option value="sevilla">Sevilla</option>
+          <option value="cadiz" selected>Cadiz</option>
+        </select>
+      </div>
+
+      <!-- Añadimos el elemento button, atributo type="button" elimina su comportamiento por defecto dentro del formulario que es submit, aqui usamos el de reset -->
+      <!-- Boton de envio, ojo al atributo -->
+      <div>
+        <button class="btn" type="reset">Reset</button>
+        <input class="btn" type="submit" value="Sign in">
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>
