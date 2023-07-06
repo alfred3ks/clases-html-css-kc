@@ -1,0 +1,20 @@
+.shows {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.shows__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 0;
+}
+
+.shows .shows__list img {
+  width: 100%;
+}
+
+.shows .shows__list figure {
+  margin: 0;
+}
