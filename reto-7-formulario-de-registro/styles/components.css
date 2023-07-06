@@ -7,9 +7,57 @@
   border: 1px solid var(--main-brand-color);
 }
 
+/* Agregamos la variante del boton reset */
+.btn.btn--secondary {
+  background-color: transparent;
+  border-color: var(--main-text-color);
+}
+
 .hidden-xs {
   display: none;
   /* visibility: hidden; */
+}
+
+/* Damos estilos a los input del formulario */
+.form__element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Estilos del checkbox */
+.form__element--checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Vemos como somos especificos con el checkbox */
+.form__element--checkbox input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Estilos a los labels */
+.form__label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Estilos del input */
+.form__input {
+  padding: 16px 12px;
+  border-radius: 5px;
+  /* Poner en las variables ojo este color */
+  background: #333333;
+  border: none;
+  color: var(--main-text-color);
+}
+
+/* Agregamos estilos al placeholder */
+.form__input::placeholder,
+textarea::placeholder {
+  /* Aqui igual llevar este color a las variables */
+  color: #cbcbcb;
 }
 
 /* Aplicamos las media queries */
