@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <!-- Los estilos los hacemos aqui -->
+  <style>
+    body {
+      display: grid;
+      /* Definimos las columnas */
+      grid-template-columns: 80px 300px 80px;
+      grid-template-columns: 20% 60% 20%;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      /* Definimos las filas */
+      grid-template-rows: 80px 35vh 40vh 80px;
+      /* Definimos el gap: ; */
+      gap: 15px;
+
+      /* Para las areas */
+      grid-template-areas:
+        "navbar navbar navbar navbar"
+        "header header header header"
+        "aside main main main"
+        "footer footer footer footer";
+    }
+
+    nav {
+      background-color: orange;
+      /* Aqui le decimos que ocupe todo el ancho, nuestro diseño tiene 4 puntos y va desde el 1 al 4*/
+      /* grid-column-start: 1;
+      grid-column-end: 4; */
+      /* Version simplificada de las columns: ; */
+      /* grid-column: 1 / 4; */
+      /* Un poco redundante estos dos */
+      /* grid-row-start: 1;
+      grid-row-end: 2; */
+      /* Version simplicada de las rows */
+      /* grid-row: 1 / 2; */
+
+      /* Para las areas */
+      grid-area: navbar;
+
+    }
+
+    section {
+      background-color: blue;
+      /* grid-column: 1 / 4;
+      grid-row: 2 / 3; */
+
+      /* Area */
+      grid-area: header;
+    }
+
+    aside {
+      background-color: yellow;
+      /* grid-column: 1 / 2;
+      grid-row: 3 / 4; */
+
+      grid-area: aside;
+    }
+
+    main {
+      background-color: blueviolet;
+      /* grid-column: 2 / 3;
+      grid-row: 3 / 4; */
+
+      /* Area */
+      grid-area: main;
+    }
+
+    footer {
+      background-color: green;
+      /* grid-column: 1 / 4;
+      grid-row: 4 / 5; */
+
+      /* Area */
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <nav>navbar</nav>
+  <section>section</section>
+  <aside>aside</aside>
+  <main>main</main>
+  <footer>footer</footer>
+</body>
+</html>

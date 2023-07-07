@@ -1,0 +1,72 @@
+.banner {
+  height: 75vh;
+  text-align: center;
+  /* Para poder usar la imagen  asi el absolute se posiciona con este*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .banner__content {
+  /* Aqui importante para que sea el texto bien recesita tambien la postion */
+  position: relative;
+  z-index: 1;
+
+  /* Añadimos nuestra animacion */
+  animation-name: fade-in;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 4;
+  animation: fade-in 5s linear;
+}
+
+/* Keyframe de fade-in */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 100%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.banner .banner__image {
+  /* Este combinado con relative */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../assets/app/catalog.jpg);
+  /* background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-size: contain; */
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* Media queries, sintaxis moderna */
+@media (width >= 800px) and (orientation: landscape) {
+  .banner {
+    height: 55vh;
+  }
+}
+
+/* Media queries del hover, muy util al hacer hover cuando en el navegador hacemos la pantalla mas pequeña pero no es un movil o tablet que son tactiles. */
+/* @media (hover: hover) {
+  p:hover {
+    color: yellow;
+  }
+} */

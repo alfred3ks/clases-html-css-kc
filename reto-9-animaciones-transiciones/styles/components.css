@@ -1,0 +1,117 @@
+/* Estilos de bottones sensillo!!!!*/
+.btn {
+  color: var(--main-text-color);
+  background-color: var(--main-brand-color);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--main-brand-color);
+}
+
+/* Hover a los botones con transiciones, solo desktop */
+@media (hover: hover) {
+  .btn {
+    /* Aqui añadimos la transicion */
+    transition: background-color 2s;
+  }
+  .btn:hover {
+    background-color: var(--main-brand-color-light);
+  }
+}
+
+/* Agregamos la variante del boton reset */
+.btn.btn--secondary {
+  background-color: transparent;
+  border-color: var(--main-text-color);
+}
+
+.hidden-xs {
+  display: none;
+  /* visibility: hidden; */
+}
+
+/* Damos estilos a los input del formulario */
+.form__element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Estilos del checkbox */
+.form__element--checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Vemos como somos especificos con el checkbox */
+.form__element--checkbox input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Estilos a los labels */
+.form__label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Estilos del input */
+.form__input {
+  padding: 16px 12px;
+  border-radius: 5px;
+  /* Poner en las variables ojo este color */
+  background: #333333;
+  border: none;
+  color: var(--main-text-color);
+}
+
+/* Agregamos estilos al placeholder */
+.form__input::placeholder,
+textarea::placeholder {
+  /* Aqui igual llevar este color a las variables */
+  color: #cbcbcb;
+}
+
+/* Aplicamos las media queries */
+/* Opcion para imprimir. Con ctrl + p lo vemos*/
+@media print {
+  * {
+    color: red;
+  }
+}
+
+/* Mobile first min-width */
+/* @media screen and (min-width: 768px) {
+  .hidden-xs {
+    display: block;
+  }
+} */
+
+/* Sintaxis mas moderna */
+@media screen and (width >= 768px) {
+  .hidden-xs {
+    display: block;
+  }
+}
+
+/* Clases del spinner */
+.spinner {
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(222, 204, 204);
+  border-left-color: rgb(255, 0, 0);
+  border-radius: 50%;
+
+  /* Creamos la animacion del spin */
+  animation: spin 0.75s linear infinite;
+}
+
+/* Creamos el keyframe */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

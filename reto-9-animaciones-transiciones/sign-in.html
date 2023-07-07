@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="stylesheet" href="./styles/sign-in.css">
+  <title>Sign in | codeflix</title>
+</head>
+
+<body class="main-bg container">
+
+  <!-- Formulario de sign-in -->
+  <div class="card">
+    <h1>Sing in</h1>
+    <!-- Formulario -->
+    <form action="registro.html" method="post" class="form">
+
+      <!-- Email -->
+      <!-- Envuelvo el label y input en un div -->
+      <div class="form__element">
+        <!-- El label y el input los relacionamos por el for y id, el atributo name muy importante -->
+        <label for="email" class="form__label">Email</label>
+        <input class="form__input" type="email" id="email" placeholder="Add your email" name="email" required>
+      </div>
+
+      <!-- El label y el input los relacionamos por el for y id, el atributo name muy importante -->
+      <!-- age -->
+      <div class="form__element">
+        <label for="age" class="form__label">Age </label>
+        <input class="form__input" type="number" id="age" placeholder="Add your age" name="age" required min="18"
+          max="65">
+      </div>
+
+      <!-- Envuelvo el label y input en un div -->
+      <!-- password -->
+      <div class="form__element">
+        <label for="password" class="form__label">Password</label>
+        <input class="form__input" type="password" id="password" placeholder="Add your password" name="password"
+          required>
+      </div>
+
+      <!-- Envuelvo el label y input en un div -->
+      <!-- Teléfono -->
+      <div class="form__element">
+        <label for="phone" class="form__label">Phone (600-600-1234)</label>
+        <input class="form__input" type="tel" id="phone" placeholder="Add your phone" name="phone" required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}-" title="format is 600-600-1234">
+      </div>
+
+      <!-- Envuelvo el label y input en un div -->
+      <!-- File -->
+      <div class="form__element">
+        <label for="avatar" class="form__label">Choose a profile image</label>
+        <input class="form__input" type="file" id="avatar" name="avatar" accept="image/png, images/jpg" required>
+      </div>
+
+      <!-- La etiqueta fieldset, nos crea como un borde, para agrupar elementos fuera del contexto-->
+      <!-- fieldset -->
+      <fieldset class="form__element">
+        <legend>Fav category</legend>
+        <div>
+          <label for="shows" class="form__label">Shows</label>
+          <input class="form__input" type="radio" id="shows" name="category" checked value="shows">
+          <label for="docus" class="form__label">Docus</label>
+          <input class="form__input" type="radio" id="docus" name="category" value="docus" required>
+        </div>
+      </fieldset>
+
+      <!-- Usando Checkbox en vez de radio OJO esto lo ha borrado interesante para enviar informacion de varios check-->
+      <!-- <fieldset>
+        <legend>Select categories</legend>
+        <div>
+          <label for="cshows">Shows</label>
+          <input type="checkbox" id="cshows" name="ccategory" checked value="shows">
+          <label for="cdocus">Docus</label>
+          <input type="checkbox" id="cdocus" name="ccategory" value="docus">
+        </div>
+      </fieldset> -->
+
+      <!-- Envuelvo el label y input en un div -->
+      <!-- Text area -->
+      <div class="form__element">
+        <label for="bio" class="form__label">Bio</label>
+        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Add your bio" minlength="10"
+          maxlength="240"></textarea>
+      </div>
+
+      <!-- Envuelvo el label y input en un div -->
+      <!-- Checkbox -->
+      <div class="form__element form__element--checkbox">
+        <input class="form__input" type="checkbox" id="remember" name="remember">
+        <label for="remember" class="form__label">Remember me</label>
+      </div>
+
+      <!-- Muy usado en las web pero dificil de dar estilos el select -->
+      <!-- Select -->
+      <div class="form__element">
+        <label for="country" class="form__label">Country</label>
+        <select name="country" id="country" required class="form__input">
+          <option value="">Select one country</option>
+          <option value="es">España</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+
+      <!-- Añadimos el elemento button, atributo type="button" elimina su comportamiento por defecto dentro del formulario que es submit, aqui usamos el de reset -->
+      <!-- Boton de envio, ojo al atributo, por defecto es submit si esta dentro del formulario -->
+      <div>
+        <button class="btn btn--secondary" type="reset">Reset</button>
+        <input class="btn" type="submit" value="Sign in">
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>
