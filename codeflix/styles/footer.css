@@ -1,0 +1,50 @@
+.footer {
+  /* Anchos de elementos*/
+
+  /* Alinear texto en horizontal */
+  text-align: center;
+  /* Dar estilos al texto del footer */
+  font-style: italic;
+
+  /* Padding */
+  /*
+  padding-top: 10px;
+  T-R-B-L
+  padding: 10px 10px 10px 10px;
+  padding: 50px 10px 10px 10px;
+  X-Y
+  padding: 20px 0;
+  */
+  padding: 40px;
+
+  /* Border */
+  /* Borde punteado */
+  /* border: 1px dashed crimson; */
+  /* Borde solido */
+  /* border: 1px solid crimson; */
+  /* El radio del borde */
+  /* border-radius: 5px; */
+
+  /* Margin separacion entre elementos */
+  /*
+  margin: 80px;
+  T-R-B-L
+  margin: 10px, 10px, 10px, 10px;
+  X-Y
+  margin: 20px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  */
+}
+
+/* Añadimos un grado mas de especificidad */
+/* Se modificaran solo los parrafos que estan dentro de la clase footer */
+.footer p {
+  /* Eliminamos los margenes de los parrafos, propiedad no heredada */
+  margin: 0;
+}
+
+/* Se modificaran solo los elementos que tengan la clase footer__company dentro de la clase footer mas especifico que el de arriba*/
+.footer .footer__company {
+  font-style: normal;
+}

@@ -1,15 +1,10 @@
 /* Variables  colores se pueden usar en todos los archivos*/
 :root {
   --main-bg-color: #000000;
-  --main-text-color: rgba(255, 255, 255, 0.5);
   --main-text-color: rgb(255, 255, 255);
-  --main-brand-color: #e50915;
-  --main-brand-color-light: #e44c54;
-  /* Para la fuentes usamos rem */
-  font-size: 16px;
-  font-family: sans-serif;
 }
 
+/* Reset estilos del navegador */
 * {
   box-sizing: border-box;
   /* Valores de nuestro reset */
@@ -17,8 +12,8 @@
   margin: 0;
 }
 
+/* aplicamos los estilos con las varaibles */
 .main-bg {
-  background-color: var(--main-bg-color);
   color: var(--main-text-color);
-  /* opacity: 1; */
+  background-color: var(--main-bg-color);
 }

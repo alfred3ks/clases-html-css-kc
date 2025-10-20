@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Estilos comunes -->
-  <link rel="stylesheet" href="common.css">
+  <!-- Normalize siempre de primero para no pisar estilos -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <title>Codeflix</title>
 </head>
 <body class="main-bg">
   <h1>Codeflix</h1>
+
+  <!-- footer -->
+  <footer class="footer">
+    <p>@2025 <em>Codeflix</em> Website</p>
+    <!-- Convencion de BEM para las clases del css -->
+    <p class="footer__company">Powered by keepcoding</p>
+  </footer>
 </body>
 </html>
