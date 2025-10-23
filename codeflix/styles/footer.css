@@ -1,10 +1,10 @@
 .footer {
-  /* Anchos de elementos*/
-
   /* Alinear texto en horizontal */
   text-align: center;
   /* Dar estilos al texto del footer */
   font-style: italic;
+  /* Uso de las variables globales */
+  background-color: var(--main-bg-color);
 
   /* Padding */
   /*
@@ -41,7 +41,18 @@
 /* Se modificaran solo los parrafos que estan dentro de la clase footer */
 .footer p {
   /* Eliminamos los margenes de los parrafos, propiedad no heredada */
-  margin: 0;
+  /* Al usar el common.css esto es redundante */
+  /* margin: 0; */
+
+  /* Medidas relativas al root 1 rem = 16px*/
+  font-size: 1rem;
+  /* Mas propiedades para texto */
+  /* Le damos peso al texto */
+  /* font-weight: bold; */
+  /* Transformamos el texto a mayuscula */
+  /* text-transform: uppercase; */
+  /* valor de line-height que va de 1 a 2, puede ir esta configuracion en el common.css*/
+  /* line-height: 1.5; */
 }
 
 /* Se modificaran solo los elementos que tengan la clase footer__company dentro de la clase footer mas especifico que el de arriba*/

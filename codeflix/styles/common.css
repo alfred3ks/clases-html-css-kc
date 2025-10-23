@@ -2,9 +2,15 @@
 :root {
   --main-bg-color: #000000;
   --main-text-color: rgb(255, 255, 255);
+  --main-brand-color: #e50914;
+  --main-brand-color-light: #e44c54;
+  font-size: 16px;
+  /* font-size: 62.5%; */
+  /* tipo de letra por default */
+  font-family: sans-serif;
 }
 
-/* Reset estilos del navegador */
+/* Reset estilos del navegador para todos los elementos */
 * {
   box-sizing: border-box;
   /* Valores de nuestro reset */
@@ -16,4 +22,5 @@
 .main-bg {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
+  /* opacity: 0.75; */
 }
