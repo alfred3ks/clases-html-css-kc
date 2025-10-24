@@ -1,0 +1,37 @@
+/* Contenedor padre */
+.banner {
+  /* Unidad relativa al alto del la pantalla */
+  height: 75vh;
+  text-align: center;
+  /* este es necesario para poder dar position absolute a la imagen */
+  position: relative;
+}
+
+/* Contenedor hijo 1 */
+.banner .banner__content {
+  /* Para poder usar usar el z-index debemos dar un position diferente al static*/
+  position: relative;
+  /* Levantamos el texto */
+  z-index: 2;
+}
+
+/* Contenedor hijo 2 */
+.banner .banner__image {
+  /* Insertamos la imagen del banner */
+  background-image: url(../assets/app/catalog.jpg);
+  /* Propiedades a las imagenes en background */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100%; */
+  /* background-size: cover; */
+  /* background-size: contain; */
+  z-index: 0;
+  /* Damos opacidad a la imagen */
+  opacity: 0.3;
+  /* Se posiciona con su padre que tiene relative mas cercano, sino lo encuentra va al html */
+  position: absolute;
+  /* Centramos la imagen al contenedor div del .banner */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
