@@ -5,6 +5,9 @@
   text-align: center;
   /* este es necesario para poder dar position absolute a la imagen */
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Contenedor hijo 1 */

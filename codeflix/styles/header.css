@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--main-bg-color);
+  /* Fijamos el header arriba */
+  /* position: fixed; */
+  position: sticky;
+  /* Usamos un valor asi nos aseguramos que siempre este arriba */
+  z-index: 999;
+  /* Lo fijamos arriba */
+  top: 0;
+  /* Aplicamos flex-box */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 15px;
+
+}
+
+/* Estilos al contenedor de la imagen */
+.header__image {
+  width: 120px;
+}
+
+/* Estilos de la imagen */
+.header__image img {
+  width: 100%;
+}
+
+/* Estilos de los enlaces de nav */
+.header .header__nav .header__nav__list {
+  list-style: none;
+}
+
+.header__nav__list .header__nav__list__item a {
+  text-decoration: none;
+}

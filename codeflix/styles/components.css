@@ -1,4 +1,4 @@
-/* Estilos de bottones sensillo!!!!*/
+/* Estilos de botones */
 .btn {
   color: var(--main-text-color);
   background-color: var(--main-brand-color);
@@ -7,7 +7,10 @@
   border: 1px solid var(--main-brand-color);
 }
 
+/* Ocultar elementos */
 .hidden {
+  /* El compoente se borra del layout */
   display: none;
+  /* El componente se hace invisible pero no se quita del layout */
   /* visibility: hidden; */
 }
