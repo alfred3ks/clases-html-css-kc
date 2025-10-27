@@ -8,9 +8,20 @@
 }
 
 /* Ocultar elementos */
-.hidden {
+.hidden-xs {
   /* El compoente se borra del layout */
   display: none;
   /* El componente se hace invisible pero no se quita del layout */
   /* visibility: hidden; */
+}
+
+/* Media queries */
+/* Sintasis antigua para pantallas por encima 768px */
+/* @media screen and (min-width:768px) {} */
+
+/* Sintasis moderna para pantallas >= 768px */
+@media screen and (width >=768px) {
+  .hidden-xs {
+    display: block;
+  }
 }
