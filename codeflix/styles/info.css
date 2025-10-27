@@ -1,12 +1,18 @@
 /* Seccion info */
 .info {
   width: 90%;
-  /* Limitamos el ancho del contenido, el texto */
+  /* Limitamos el ancho del contenido */
   max-width: 768px;
-  /* Centramos el contenido */
+  /* Centramos el contenedor info*/
   margin: 0 auto;
+  margin-top: 25px;
 }
 
+.info__text h2 {
+  margin-bottom: 15px;
+}
+
+/* Contenedor del video e imagen */
 .info .info__video {
   position: relative;
   display: flex;
