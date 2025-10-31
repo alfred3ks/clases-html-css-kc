@@ -615,4 +615,4 @@ textarea::placeholder {
 }
 ```
 
-Hasta aqui el formulario, video 5 min: 
+Hasta aqui el formulario, video 5 min: Descanso.
