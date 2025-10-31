@@ -9,15 +9,12 @@
   <link rel="stylesheet" href="./styles/sign-in.css">
   <title>Sign in | codeflix</title>
 </head>
-
 <body class="main-bg container">
-
   <!-- Formulario de sign-in -->
   <div class="card">
     <h1>Sing in</h1>
     <!-- Formulario -->
     <form action="registro.html" method="post" class="form">
-
       <!-- Email -->
       <!-- Envuelvo el label y input en un div -->
       <div class="form__element">
@@ -25,38 +22,30 @@
         <label for="email" class="form__label">Email</label>
         <input class="form__input" type="email" id="email" placeholder="Add your email" name="email" required>
       </div>
-
-      <!-- El label y el input los relacionamos por el for y id, el atributo name muy importante -->
       <!-- age -->
       <div class="form__element">
         <label for="age" class="form__label">Age </label>
         <input class="form__input" type="number" id="age" placeholder="Add your age" name="age" required min="18"
           max="65">
       </div>
-
-      <!-- Envuelvo el label y input en un div -->
       <!-- password -->
       <div class="form__element">
         <label for="password" class="form__label">Password</label>
         <input class="form__input" type="password" id="password" placeholder="Add your password" name="password"
           required>
       </div>
-
-      <!-- Envuelvo el label y input en un div -->
-      <!-- Teléfono -->
+      <!-- phone -->
+      <!-- pattern usamos una expresion regular para validar el telefono -->
       <div class="form__element">
-        <label for="phone" class="form__label">Phone (600-600-1234)</label>
+        <label for="phone" class="form__label">Phone</label>
         <input class="form__input" type="tel" id="phone" placeholder="Add your phone" name="phone" required
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}-" title="format is 600-600-1234">
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="format is 600-600-1234">
       </div>
-
-      <!-- Envuelvo el label y input en un div -->
       <!-- File -->
       <div class="form__element">
         <label for="avatar" class="form__label">Choose a profile image</label>
         <input class="form__input" type="file" id="avatar" name="avatar" accept="image/png, images/jpg" required>
       </div>
-
       <!-- La etiqueta fieldset, nos crea como un borde, para agrupar elementos fuera del contexto-->
       <!-- fieldset -->
       <fieldset class="form__element">
@@ -68,7 +57,6 @@
           <input class="form__input" type="radio" id="docus" name="category" value="docus" required>
         </div>
       </fieldset>
-
       <!-- Usando Checkbox en vez de radio OJO esto lo ha borrado interesante para enviar informacion de varios check-->
       <!-- <fieldset>
         <legend>Select categories</legend>
@@ -79,22 +67,17 @@
           <input type="checkbox" id="cdocus" name="ccategory" value="docus">
         </div>
       </fieldset> -->
-
-      <!-- Envuelvo el label y input en un div -->
-      <!-- Text area -->
+      <!-- Textarea -->
       <div class="form__element">
         <label for="bio" class="form__label">Bio</label>
-        <textarea name="bio" id="bio" cols="30" rows="10" placeholder="Add your bio" minlength="10"
-          maxlength="240"></textarea>
+        <textarea class="form__textarea" name="bio" id="bio" cols="30" rows="10" placeholder="Add your bio"
+          minlength="10" maxlength="240"></textarea>
       </div>
-
-      <!-- Envuelvo el label y input en un div -->
       <!-- Checkbox -->
       <div class="form__element form__element--checkbox">
         <input class="form__input" type="checkbox" id="remember" name="remember">
         <label for="remember" class="form__label">Remember me</label>
       </div>
-
       <!-- Muy usado en las web pero dificil de dar estilos el select -->
       <!-- Select -->
       <div class="form__element">
@@ -105,7 +88,6 @@
           <option value="usa">USA</option>
         </select>
       </div>
-
       <!-- Añadimos el elemento button, atributo type="button" elimina su comportamiento por defecto dentro del formulario que es submit, aqui usamos el de reset -->
       <!-- Boton de envio, ojo al atributo, por defecto es submit si esta dentro del formulario -->
       <div>
@@ -113,7 +95,6 @@
         <input class="btn" type="submit" value="Sign in">
       </div>
     </form>
-
   </div>
 </body>
 </html>

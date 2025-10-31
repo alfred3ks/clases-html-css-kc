@@ -7,6 +7,12 @@
   border: 1px solid var(--main-brand-color);
 }
 
+/* Agregamos la variante del boton reset más especifico */
+.btn.btn--secondary {
+  background-color: transparent;
+  border-color: var(--main-text-color);
+}
+
 /* Ocultar elementos */
 .hidden-xs {
   /* El compoente se borra del layout */
@@ -15,7 +21,60 @@
   /* visibility: hidden; */
 }
 
-/* Media queries */
+/* Damos estilos a los input del formulario */
+.form__element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Estilos del checkbox */
+.form__element--checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Vemos como somos especificos con el checkbox */
+.form__element--checkbox input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Estilos a los labels */
+.form__label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Estilos del input */
+.form__input {
+  padding: 16px 12px;
+  border-radius: 5px;
+  /* Poner en las variables ojo este color */
+  background: #333333;
+  border: none;
+  color: var(--main-text-color);
+}
+
+/* Agregamos estilos a los placeholder */
+.form__input::placeholder,
+textarea::placeholder {
+  /* Aqui igual llevar este color a las variables */
+  color: #cbcbcb;
+}
+
+.form__element .form__textarea {
+  padding: 10px 5px;
+}
+
+/* Aplicamos las media queries */
+/* Opcion para imprimir. Con ctrl + p lo vemos*/
+/* @media print {
+  * {
+    color: red;
+  }
+} */
+
 /* Sintasis antigua para pantallas por encima 768px */
 /* @media screen and (min-width:768px) {} */
 

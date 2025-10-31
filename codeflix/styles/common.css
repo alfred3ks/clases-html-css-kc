@@ -18,6 +18,11 @@
   margin: 0;
 }
 
+/* label,
+input {
+  display: block;
+} */
+
 /* aplicamos los estilos con las varaibles */
 .main-bg {
   color: var(--main-text-color);
