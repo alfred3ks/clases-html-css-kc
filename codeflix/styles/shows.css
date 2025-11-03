@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.shows h2 {
+  margin: 15px 0;
+}
+
 .shows__list {
   list-style: none;
   display: grid;
@@ -22,7 +26,7 @@
 }
 
 /* Media queries */
-@media screen and (min-width: 768px) {
+@media screen and (width>=768px) {
   .shows__list {
     grid-template-columns: repeat(4, 1fr);
   }
