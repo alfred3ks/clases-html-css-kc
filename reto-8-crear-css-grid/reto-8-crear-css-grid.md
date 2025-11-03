@@ -17,6 +17,4 @@ Cuándo usar Grid:
 
 Para usar grid usaremos la propiedad display:grid;
 
-Vamos a ver como usar grid en en ejemplo que llamaremos css-grid.
-
-#### css-grid:
+Vamos a ver como usar grid en en ejemplo que llamaremos ejemplo-css-grid.

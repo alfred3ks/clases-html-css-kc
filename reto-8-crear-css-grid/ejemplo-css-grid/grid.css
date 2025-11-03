@@ -1,17 +1,20 @@
 body {
   display: grid;
   /* Definimos las columnas */
-  grid-template-columns: 80px 300px 80px;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: 100%; */
+  /* grid-template-columns: 80px 300px 80px; */
+  /* grid-template-columns: 20% 60% 20%; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(4, 1fr);
   /* Definimos las filas */
   grid-template-rows: 80px 35vh 40vh 80px;
-  /* Definimos el gap: ; */
+  /* Definimos el gap, separacion entre elementos */
   gap: 15px;
 
   /* Para las areas */
+  /* Debemos definir antes las columns y rows */
+  /* Si queremos deja un hueco ponemos un . y se vera el hueco */
   grid-template-areas:
     "navbar navbar navbar navbar"
     "header header header header"
@@ -35,6 +38,10 @@ nav {
   /* Para las areas */
   grid-area: navbar;
 
+  /* Centramos el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
@@ -44,6 +51,11 @@ section {
 
   /* Area */
   grid-area: header;
+
+  /* Centramos el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 aside {
@@ -52,6 +64,10 @@ aside {
       grid-row: 3 / 4; */
 
   grid-area: aside;
+  /* Centramos el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -61,6 +77,10 @@ main {
 
   /* Area */
   grid-area: main;
+  /* Centramos el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
@@ -70,4 +90,15 @@ footer {
 
   /* Area */
   grid-area: footer;
+  /* Centramos el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* @media screen and (width>=768px) {
+  body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+} */
