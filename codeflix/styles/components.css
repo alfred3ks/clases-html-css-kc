@@ -5,6 +5,13 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--main-brand-color);
+  /* transition: ; */
+  transition: background-color ease 2s;
+}
+
+/* Transiciones: Hover a los botones */
+.btn:hover {
+  background-color: cadetblue;
 }
 
 /* Agregamos la variante del boton reset más especifico */
@@ -35,7 +42,7 @@
 }
 
 /* Vemos como somos especificos con el checkbox */
-.form__element--checkbox input[type="checkbox"] {
+.form__element--checkbox input[type='checkbox'] {
   margin-right: 5px;
 }
 
