@@ -16,6 +16,26 @@
   position: relative;
   /* Levantamos el texto */
   z-index: 2;
+
+  /* Animación */
+  /* Nombre de la animación */
+  /* animation-name: fade-in; */
+  /* Duración */
+  /* animation-duration: 2s; */
+  /* Forma del movimiento (suavizado) */
+  /* animation-timing-function: ease; */
+  /* Tiempo antes de empezar */
+  /* animation-delay: 0s; */
+  /* Repeticiones (1 vez) */
+  /* animation-iteration-count: 1; */
+  /* Dirección: normal, reverse, alternate... */
+  /* animation-direction: normal; */
+  /* Mantiene el estado final */
+  /* animation-fill-mode: forwards; */
+  /* Estado de la animación */
+  /* animation-play-state: running; */
+  /* Version en una sola linea */
+  animation: fade-in 5s ease;
 }
 
 /* Contenedor hijo 2 */
@@ -52,3 +72,17 @@
     color: yellow;
   }
 } */
+
+/* Animaciones del texto de banner */
+@keyframes fade-in {
+
+  /* inicio */
+  0% {
+    opacity: 0;
+  }
+
+  /* Final */
+  100% {
+    opacity: 1;
+  }
+}

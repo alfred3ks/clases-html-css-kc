@@ -6,13 +6,13 @@
   border-radius: 5px;
   border: 1px solid var(--main-brand-color);
   /* transition: ; */
-  transition: background-color ease 2s;
+  /* transition: background-color ease 0.3s; */
 }
 
 /* Transiciones: Hover a los botones */
-.btn:hover {
-  background-color: cadetblue;
-}
+/* .btn:hover {
+  background-color: var(--main-brand-color-light);
+} */
 
 /* Agregamos la variante del boton reset más especifico */
 .btn.btn--secondary {
@@ -89,5 +89,16 @@ textarea::placeholder {
 @media screen and (width >=768px) {
   .hidden-xs {
     display: block;
+  }
+}
+
+/* transition del hover para solo con raton */
+@media (hover: hover) {
+  .btn {
+    transition: background-color easy 0.3s;
+  }
+
+  .btn:hover {
+    background-color: var(--main-brand-color-light);
   }
 }
