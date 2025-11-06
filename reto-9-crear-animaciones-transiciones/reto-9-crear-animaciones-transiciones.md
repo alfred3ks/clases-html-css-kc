@@ -244,3 +244,152 @@ footer.css:
   );
 }
 ```
+
+NOTA: Cuando queramos saber si algo que estamos implementando en el proyecto se puede usar en navegadores ir a la web de can i use y comprobarlo.
+
+https://caniuse.com/
+
+#### Imágenes Responsive:
+
+Tenemos la carpeta images-responsive donde pondremos los ejemplos.
+
+Hasta ahora hemos visto crear images con la etiqueta `<img/>`. Ahora veremos como podemos tener las control de las imagenes usando `<pictures></pictures>` y `srcset`.
+
+#### Etiqueta img:
+
+Este seria el caso si tenemos una imagen por medio de la etiqueta `<img/>`:
+
+images-responsive/index.html:
+
+```html
+<!-- En esta imagen solo hemos usado la etiqueta img. -->
+<!-- img -->
+<img
+  src="img/docus/docu_1.webp"
+  class="docu"
+  alt="imagen serpiente documentales"
+/>
+```
+
+images-responsive/style.css:
+
+```css
+/* Estilos a una imagen con etiqueta img */
+img.docu {
+  /* Propiedad clave para que se adapte la imagen*/
+  width: 100%;
+  background-color: aqua;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center center;
+}
+```
+
+Aquí vemos que la propiedad clave para hacer responsive la imagen es el width:100%.
+
+aspect-ratio:
+La propiedad aspect-ratio en CSS define la relación de proporción entre el ancho y la altura de un elemento.
+
+object-fit:
+Controla cómo se ajusta la imagen dentro de su contenedor, cuando no tiene la misma proporción.
+cover → La imagen llena el espacio, puede recortarse.
+contain → La imagen se ve completa, pero pueden quedar bordes/vacíos.
+fill → Deforma la imagen para rellenar todo.
+none → Mantiene tamaño original, puede sobresalir.
+scale-down → Usa none o contain, lo que quede más pequeño.
+
+object-position:
+Define qué parte de la imagen se alinea o centra dentro del contenedor.
+left top: Muestra parte superior izquierda
+right bottom: Muestra parte inferior derecha
+center center: Centra la imagen (por defecto)
+50% 30%: Posición personalizada.
+
+#### Etiqueta picture/source:
+
+Para este caso tenemos las etiquetas `<pictures></pictures>` y `<sourse></sourse>`:
+
+La etiqueta `<picture>` se usa para mostrar diferentes versiones de una imagen según el dispositivo, tamaño de pantalla o tipo de formato, y dentro de ella se usan `<source>` y un `<img>` de respaldo.
+
+- picture: Es un contenedor que permite colocar varias fuentes de imagen.
+
+- source:
+
+Define imágenes alternativas con condiciones, por ejemplo:
+Usar WebP si el navegador lo soporta
+Usar una imagen grande en pantallas grandes
+Usar versión pequeña en móviles
+
+Tiene atributos como:
+srcset → archivo de imagen
+media → condición (como media query)
+type → tipo de formato (ej: WebP, PNG, JPEG)
+
+- img:
+
+La imagen por defecto (fallback).
+Se usa si ninguna condición del source aplica.
+
+images-responsive/index.html:
+
+```html
+<!-- pictures/source -->
+<!-- Recurso externo desde pexels -->
+<!-- NOTA: el orden es importante porque actua como una media queries en funcion del tamaña mostrara una u otra imagen -->
+<picture>
+  <!-- Desktop -->
+  <source
+    srcset="
+      https://images.pexels.com/photos/34375368/pexels-photo-34375368.jpeg?w=1200
+    "
+    media="(min-width:1200px)"
+  />
+  <!-- Tablet -->
+  <source
+    srcset="
+      https://images.pexels.com/photos/34375368/pexels-photo-34375368.jpeg?w=768
+    "
+    media="(min-width: 768px)"
+  />
+  <!-- Imagen por defecto, mobile si no ponemos las otras esta se muestra siempre -->
+  <img
+    src="https://images.pexels.com/photos/34375368/pexels-photo-34375368.jpeg?w=300"
+    class="docu"
+    alt="horizonte"
+  />
+</picture>
+```
+
+#### Imágenes con diferentes densidad de pixeles:
+
+Tambien se puede usar `<img/>` con el atributo `srcset=""`. Esto es bastante interesante cuando queremos mostrar las imágenes en función de la densidad de pixeles del usuario. Lo que se llama pantalas retinas.
+
+En el navegador en la ventana del inspector podemos habilitar para mostrar los tres niveles de pantallas. Va desde 1 al 3. 1 para pantallas normales, 2 para pantallas buenas y 3 para pantallas muy buenas.
+
+images-responsive/index.html:
+
+```html
+<!-- srcset para densidad de pixeles del usuario, retina, cargara solo la imagen para la densidad de pixel -->
+<img
+  src="./img/paisaje800_1x.jpg"
+  class="docu"
+  alt="paisaje"
+  srcset="
+    ./img/paisaje800_1x.jpg  1x,
+    ./img/paisaje1200_2x.jpg 2x,
+    ./img/paisaje2400_3x.jpg 3x
+  "
+/>
+```
+
+Tamaños recomendados de imágenes:
+La regla es multiplicar el tamaño base.
+Ejemplo: si tu imagen se mostrará a 800px de ancho visiblemente:
+Escala:
+Normal 1X: 800px
+Retina 2x: 1600px
+SuperRetina 3x: 2400px
+
+Tenemos una web donde podemos tratar las imagenes:
+
+https://responsivebreakpoints.com

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Images Resposive | @alfred3ks</title>
+</head>
+<body>
+  <h2>Imágenes Responsive.</h2>
+  <!-- En esta imagen solo hemos usado la etiqueta img. -->
+  <img src="img/docu_1.webp" class="docu" alt="imagen serpiente documentales" />
+
+
+  <!-- pictures/source -->
+  <!-- Recurso externo desde pexels -->
+  <!-- NOTA: el orden es importante porque actua como una media queries en funcion del tamaña mostrara una u otra imagen -->
+  <picture>
+    <!-- Desktop -->
+    <source srcset="
+          https://images.pexels.com/photos/34375368/pexels-photo-34375368.jpeg?w=1200
+        " media="(min-width:1200px)" />
+    <!-- Tablet -->
+    <source srcset="
+          https://images.pexels.com/photos/34375368/pexels-photo-34375368.jpeg?w=768
+        " media="(min-width: 768px)" />
+    <!-- Imagen por defecto, mobile si no ponemos las otras esta se muestra siempre -->
+    <img src="https://images.pexels.com/photos/34375368/pexels-photo-34375368.jpeg?w=300" class="docu"
+      alt="horizonte" />
+  </picture>
+
+  <!-- srcset para densidad de pixeles del usuario, retina, cargara solo la imagen para la densidad de pixel -->
+  <img src="./img/paisaje800_1x.jpg" class="docu" alt="paisaje" srcset="
+        ./img/paisaje800_1x.jpg 1x,
+        ./img/paisaje1600_2x.jpg 2x,
+        ./img/paisaje2400_3x.jpg 3x" />
+
+  <!-- Vemos el ejemplo con un perrito, es lo mismo que el ejemplo anterior -->
+  <img src="./img/dog_c_scalew_591.jpg" class="docu" alt="perrito" srcset="
+        ./img/dog_c_scalew_591.jpg 591w,
+        ./img/dog_c_scalew_1352.jpg 1352w" />
+</body>
+</html>
