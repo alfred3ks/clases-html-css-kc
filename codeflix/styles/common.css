@@ -1,3 +1,28 @@
+/* ====== Fuentes ====== */
+/* Roboto Thin 100 */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/roboto-v30-latin-100.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Roboto Light 300 */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/roboto-v30-latin-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Roboto Bold 700 */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto/roboto-v30-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* Variables  colores se pueden usar en todos los archivos*/
 :root {
   --main-bg-color: #000000;
@@ -7,7 +32,7 @@
   font-size: 16px;
   /* font-size: 62.5%; */
   /* tipo de letra por default */
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Reset estilos del navegador para todos los elementos */

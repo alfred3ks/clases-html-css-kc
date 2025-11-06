@@ -393,3 +393,74 @@ SuperRetina 3x: 2400px
 Tenemos una web donde podemos tratar las imagenes:
 
 https://responsivebreakpoints.com
+
+#### Añadir fuentes al proyecto:
+
+Para codeflix vamos a añadir la fuente roboto.
+
+https://fonts.google.com/
+https://fonts.google.com/?query=roboto
+
+Copiamos el codigo embebido que nos dan y lo usamos en el head del index.html.
+
+index.html:
+
+```html
+<head>
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+```
+
+Luego en common.css aplicamos la fuente:
+
+common.css:
+
+```css
+/* Variables  colores se pueden usar en todos los archivos*/
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+```
+
+Si no podemos o no nos dejan usar fuente de google font, podemos bajarlas a nuestro proyecto, existe una web donde podemos bajar las fuentes:
+
+https://gwfh.mranftl.com/fonts
+
+Escogemos la fuente que deseamos y bajamos los archivos, en una carpeta llamada font la ponemos en la raiz del proyecto. lo recomendado es descargar .woff2 y .woff asi tendremos mas soporte.
+
+En nuestro archivo common.css la usariamos asi: OJO ponerlo antes del root:
+
+common.css:
+
+```css
+/* ====== Fuentes ====== */
+/* Roboto Thin 100 */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/roboto-v30-latin-100.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Roboto Light 300 */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/roboto-v30-latin-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Roboto Bold 700 */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto/roboto-v30-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+```
