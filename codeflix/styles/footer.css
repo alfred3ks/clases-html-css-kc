@@ -6,6 +6,10 @@
   /* Uso de las variables globales */
   background-color: var(--main-bg-color);
 
+  /* Gradientes */
+  /* background: radial-gradient(); */
+  /* background: linear-gradient(); */
+  background: radial-gradient(circle, rgba(255, 0, 0, 1) 0%, rgba(20, 14, 14, 1) 100%);
   /* Padding */
   /*
   padding-top: 10px;
@@ -16,6 +20,7 @@
   padding: 20px 0;
   */
   padding: 40px;
+  margin-top: 10px;
 
   /* Border */
   /* Borde punteado */

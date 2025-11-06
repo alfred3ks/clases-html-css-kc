@@ -211,3 +211,36 @@ spinner.css:
 Aquí como nuevo vemos la propiedad `transform` la cual nos permite mover cajas dentro del html. Muy interesante.
 
 Descanso. 2:00:00.
+
+#### Gradientes:
+
+Los gradientes en CSS son transiciones suaves entre dos o más colores. En lugar de usar un color sólido, un gradiente mezcla los colores progresivamente, creando efectos como degradados lineales (de arriba a abajo, izquierda a derecha, etc.) o radiales (desde el centro hacia afuera).
+
+Se usan para fondos, botones, textos y elementos decorativos, dando más profundidad y estilo visual a la interfaz.
+
+Vamos a realizar los gradientes en el footer de codeflix.
+
+index.html:
+
+```html
+<!-- footer -->
+<footer class="footer">
+  <p>@2025 <em>Codeflix</em> Website</p>
+  <!-- Convencion de BEM para las clases del css -->
+  <p class="footer__company">Powered by keepcoding</p>
+</footer>
+```
+
+Este gradiente lo obtuvimos de la web https://cssgradient.io/
+
+footer.css:
+
+```css
+.footer {
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(20, 14, 14, 1) 100%
+  );
+}
+```
