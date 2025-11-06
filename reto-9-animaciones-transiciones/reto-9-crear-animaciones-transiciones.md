@@ -170,3 +170,44 @@ banner.css:
 ```
 
 Paro video 6 min 1:40:39
+
+#### Spinner:
+
+index.html:
+
+```html
+<!-- Creamos el spinner para animaciones -->
+<div class="spinner"></div>
+```
+
+spinner.css:
+
+```css
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid crimson;
+  border-left-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  /* left: 50%; */
+  left: calc(50% - 25px);
+  z-index: 3;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+Aquí como nuevo vemos la propiedad `transform` la cual nos permite mover cajas dentro del html. Muy interesante.
+
+Descanso. 2:00:00.
